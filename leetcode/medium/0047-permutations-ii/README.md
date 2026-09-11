@@ -37,9 +37,9 @@ Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 709 ms (beats 5.15%)  
-**Memory:** 46.7 MB (beats 42.81%)  
-**Submitted:** 2026-09-11T06:43:10.048Z  
+**Runtime:** 1 ms  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-09-11T06:42:51.139Z  
 
 ```java
 class Solution {
