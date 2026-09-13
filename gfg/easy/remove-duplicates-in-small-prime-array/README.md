@@ -30,7 +30,7 @@ Explanation: There doesn't exists any duplicate element.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-13T13:01:33.638Z  
+**Submitted:** 2026-09-13T13:04:00.316Z  
 
 ```java
 class Solution {
@@ -38,9 +38,7 @@ class Solution {
         // code here
         HashSet<Integer> hs = new HashSet<>();
         for(int num : arr) hs.add(num);
-        ArrayList<Integer> res = new ArrayList<>();
-        for(int num : hs)  res.add(num);
-        return res;
+        return new ArrayList(hs);
     }
 }
 ```
