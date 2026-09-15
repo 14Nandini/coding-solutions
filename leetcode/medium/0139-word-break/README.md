@@ -50,9 +50,9 @@ Output: false
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-15T13:03:23.695Z  
+**Runtime:** 2 ms (beats 85.81%)  
+**Memory:** 43.2 MB (beats 83.06%)  
+**Submitted:** 2026-09-15T13:03:42.966Z  
 
 ```java
 class Solution {
