@@ -36,20 +36,20 @@ Output: 2
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-09-15T07:23:03.480Z  
+**Memory:** 42.4 MB  
+**Submitted:** 2026-09-15T07:24:07.742Z  
 
 ```java
 class Solution {
     public int findMaxConsecutiveOnes(int[] nums) {
-        int c = 1, max = 1;
+        int c = 0, max = 0;
         if(nums[0] == 1) c++;
         for(int i = 1; i < nums.length; i++){
             if(nums[i-1] == 1 && nums[i] == 1){
                 c++;
                 max = Math.max(c, max);
             }
-            else c = 1;
+            else c = 0;
         }
         return max;
     }
