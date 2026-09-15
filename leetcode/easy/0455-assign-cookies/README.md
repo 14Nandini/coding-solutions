@@ -47,9 +47,9 @@ You need to output 2.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-15T07:02:39.969Z  
+**Runtime:** 16 ms (beats 10.24%)  
+**Memory:** 50.9 MB (beats 98.45%)  
+**Submitted:** 2026-09-15T07:03:03.681Z  
 
 ```java
 class Solution {
