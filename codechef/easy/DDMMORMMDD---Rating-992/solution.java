@@ -1,47 +1,34 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+import java.util.Scanner;
 
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-		Scanner sc = new Scanner(System.in);
-		int t = sc.nextInt();
-		while(t-- > 0){
-		    int x = sc.nextInt();
-		    String str = sc.next();
-		    System.out.println(prize(str,x));
-		}
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
 
-	}
-	static int prize(String s, int x){
-	    int c = 0, n = 0, d = 0;
-	    for(int i = 0; i < s.length(); i++){
-	        char ch = s.charAt(i);
-	        if(ch == 'C') c++;
-	        else if (ch == 'N') n++;
-	        else d++;
-	    }
-	    c = c * 2 + d;
-	    n = n * 2 + d;
-	    if(c > n) return 60 * x;
-	    else if(c < n) return 40 * x;
-	    else return 55 * x;
-	}
+        while (t-- > 0) {
+            String s = scanner.next();
+            
+            int first = Integer.parseInt(s.substring(0,2));
+            int second = Integer.parseInt(s.substring(3,5));
+            
+            if(first < 12 && second < 12) System.out.println("BOTH");
+            else if(first < 12) System.out.println("MM/DD/YYYY");
+            else System.out.println("DD/MM/YYYY");
+            
+            // String[] str = s.split("/");
+            // String r = "";
+            // int[] res = new int[str.length];
+            // for(int i = 0; i < str.length; i++){
+            //     res[i] = Integer.parseInt(str[i]);
+            //     if(1 <= res[i] && res[i] <= 31) {
+            //         if(res[i] <= 12) r = r + "MM/";
+            //         else r = r + "DD/";
+            //     }
+            //     else r = r + "YYYY";
+            // }
+            // String both = "MM/MM/YYYY";
+            // if(r.equals(both)) System.out.println("BOTH");
+            // else System.out.println(r);
+        }
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
