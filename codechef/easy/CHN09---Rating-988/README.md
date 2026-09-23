@@ -48,7 +48,7 @@ baaba
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T15:33:05.899Z  
+**Submitted:** 2026-09-23T15:33:11.504Z  
 
 ```java
 import java.util.*;
