@@ -59,7 +59,7 @@ Fun fact: `29/02/2024` (read as `DD/MM/YYYY`) is a leap year day.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-23T14:52:40.664Z  
+**Submitted:** 2026-09-23T14:54:08.007Z  
 
 ```java
 import java.util.Scanner;
@@ -71,31 +71,31 @@ public class Main {
 
         while (t-- > 0) {
             String s = scanner.next();
-            
-            int first = Integer.parseInt(s.substring(0,2));
-            int second = Integer.parseInt(s.substring(3,5));
-            
-            if(first < 12 && second < 12) System.out.println("BOTH");
-            else if(first < 12) System.out.println("MM/DD/YYYY");
-            else System.out.println("DD/MM/YYYY");
-            
-            // String[] str = s.split("/");
-            // String r = "";
-            // int[] res = new int[str.length];
-            // for(int i = 0; i < str.length; i++){
-            //     res[i] = Integer.parseInt(str[i]);
-            //     if(1 <= res[i] && res[i] <= 31) {
-            //         if(res[i] <= 12) r = r + "MM/";
-            //         else r = r + "DD/";
-            //     }
-            //     else r = r + "YYYY";
-            // }
-            // String both = "MM/MM/YYYY";
-            // if(r.equals(both)) System.out.println("BOTH");
-            // else System.out.println(r);
+
+            String[] str = s.split("/");
+            String r = "";
+            int[] res = new int[str.length];
+            for(int i = 0; i < str.length; i++){
+                res[i] = Integer.parseInt(str[i]);
+                if(1 <= res[i] && res[i] <= 31) {
+                    if(res[i] <= 12) r = r + "MM/";
+                    else r = r + "DD/";
+                }
+                else r = r + "YYYY";
+            }
+            String both = "MM/MM/YYYY";
+            if(r.equals(both)) System.out.println("BOTH");
+            else System.out.println(r);
         }
     }
 }
+
+// int first = Integer.parseInt(s.substring(0,2));
+// int second = Integer.parseInt(s.substring(3,5));
+            
+// if(first < 12 && second < 12) System.out.println("BOTH");
+// else if(first < 12) System.out.println("MM/DD/YYYY");
+// else System.out.println("DD/MM/YYYY");
 
 ```
 
