@@ -45,29 +45,29 @@ myHashSet.contains(2); // return False, (already removed)
 ## Solution
 
 **Language:** Java  
-**Runtime:** 14 ms (beats 38.29%)  
-**Memory:** 53.7 MB (beats 62.41%)  
-**Submitted:** 2026-09-23T13:07:41.732Z  
+**Runtime:** 11 ms (beats 99.97%)  
+**Memory:** 53.9 MB (beats 53.46%)  
+**Submitted:** 2026-09-23T13:11:45.733Z  
 
 ```java
 class MyHashSet {
 
-    HashSet<Integer> hs;
+    private boolean[] set;
 
     public MyHashSet() {
-        hs = new HashSet<>();
+        set = new boolean[1000001];
     }
     
     public void add(int key) {
-        hs.add(key);
+        set[key] = true;
     }
     
     public void remove(int key) {
-        hs.remove(key);
+        set[key] = false;
     }
     
     public boolean contains(int key) {
-        return hs.contains(key);
+        return set[key];
     }
 }
 
