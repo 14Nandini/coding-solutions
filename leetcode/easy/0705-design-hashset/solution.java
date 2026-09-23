@@ -1,21 +1,21 @@
 class MyHashSet {
 
-    HashSet<Integer> hs;
+    private boolean[] set;
 
     public MyHashSet() {
-        hs = new HashSet<>();
+        set = new boolean[1000001];
     }
     
     public void add(int key) {
-        hs.add(key);
+        set[key] = true;
     }
     
     public void remove(int key) {
-        hs.remove(key);
+        set[key] = false;
     }
     
     public boolean contains(int key) {
-        return hs.contains(key);
+        return set[key];
     }
 }
 
