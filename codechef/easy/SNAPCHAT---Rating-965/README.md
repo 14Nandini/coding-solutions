@@ -80,7 +80,7 @@ The maximum streak count over $5$ days is $1$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-24T15:38:55.326Z  
+**Submitted:** 2026-09-24T15:41:27.215Z  
 
 ```java
 import java.util.Scanner;
@@ -102,11 +102,15 @@ public class Main {
             for (int i = 0; i < n; i++) {
                 b[i] = scanner.nextInt();
             }
-            int streak = 0;
+            int currStreak = 0, maxStreak = 0;
             for(int i = 0; i < n; i++){
-                if(a[i] != 0 && b[i] != 0) streak++;
+                if(a[i] > 0 && b[i] > 0){
+                    currStreak++;
+                    maxStreak = Math.max(currStreak, maxStreak);
+                }
+                else currStreak = 0;
             }
-            System.out.println(streak);
+            System.out.println(maxStreak);
             }
         // Your code goes here
         
