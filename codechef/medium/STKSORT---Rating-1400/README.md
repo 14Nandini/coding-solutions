@@ -69,7 +69,7 @@ By following above sequence of operations you end up with $B = [1, 2, 3, 4]$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-25T15:47:54.760Z  
+**Submitted:** 2026-09-25T15:48:06.922Z  
 
 ```java
 import java.util.*;
