@@ -40,7 +40,7 @@ Since 5 and 3 are not there in the queue we output -1 for them.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-25T13:07:16.897Z  
+**Submitted:** 2026-09-25T13:15:10.090Z  
 
 ```java
 class Geeks {
