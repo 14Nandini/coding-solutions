@@ -54,7 +54,7 @@ In the third test case, the string cannot be split into more than one component,
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-25T17:29:34.928Z  
+**Submitted:** 2026-09-25T17:28:10.304Z  
 
 ```java
 import java.util.*;
