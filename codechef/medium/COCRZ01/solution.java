@@ -1,26 +1,26 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while(t-- > 0){
-            int n = sc.nextInt();
-            int k = sc.nextInt();
-            k = k % n;
-            Deque<Integer> q = new ArrayDeque<>();
-            for(int i = 0; i < n; i++) q.offerLast(sc.nextInt());
-            for(int i = 0; i < k; i++){
-                int val = q.pollFirst();
-                q.addLast(val);
+class Solution {
+    public int findMinimumRemovals(List<int[]> intervalList) {
+        
+        // write your code here 
+        int c = 0;
+        //Collections.sort(intervalList.get);
+        for(int i = 0; i < intervalList.size()-1; i++){
+            int[] a = intervalList.get(i);
+            int[] b = intervalList.get(i+1);
+            if(a[0] > b[0]){
+                intervalList.set(i,b);
+                intervalList.set(i+1,a);
             }
-            for(int val : q) System.out.print(val + " ");
-            System.out.println();
         }
-	}
+        for(int i = 0; i < intervalList.size()-1; i++){
+            int[] a = intervalList.get(i);
+            int[] b = intervalList.get(i+1);
+            if(b[0] < a[1]){
+                c++;
+            } 
+        }
+        // System.out.println(intervalList);
+        return c;
+    }
+
 }
