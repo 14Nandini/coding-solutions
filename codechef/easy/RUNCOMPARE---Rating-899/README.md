@@ -80,7 +80,7 @@ Both Alice and Bob are happy on the second day, so the answer is $1$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T06:39:11.864Z  
+**Submitted:** 2026-09-28T06:39:24.870Z  
 
 ```java
 import java.util.Scanner;
