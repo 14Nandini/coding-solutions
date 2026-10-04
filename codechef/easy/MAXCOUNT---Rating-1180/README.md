@@ -65,7 +65,7 @@ In first case 2 occurs twice whereas all other elements occur only once. In seco
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T09:11:55.952Z  
+**Submitted:** 2026-10-04T09:12:14.032Z  
 
 ```java
 class Solution {
