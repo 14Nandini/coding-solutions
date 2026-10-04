@@ -8,9 +8,13 @@ class Solution {
         int maxKey = 0, maxVal = 0;
         for(Map.Entry<Integer,Integer> entry : hm.entrySet()){
             int value = entry.getValue();
+            int key = entry.getKey();
             if(value > maxVal){
                 maxVal = value;
-                maxKey = entry.getKey();
+                maxKey = key;
+            }
+            else if (value == maxVal && key < maxKey) {
+                maxKey = key;
             }
         }
         int[] res = new int[2];
