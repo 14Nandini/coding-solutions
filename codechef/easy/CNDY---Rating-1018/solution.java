@@ -16,11 +16,10 @@ class Codechef
             
             HashMap<Integer, Integer> hm = new HashMap<>();
             for(int i = 0; i < n; i++){
-                
+                hm.put(a[i], hm.getOrDefault(a[i], 0) + 1);
             }
             boolean invalid = false;
-            for(int i = 0n; i < 2*n; i++){
-                hm.put(a[i], hm.getOrDefault(a[i], 0) + 1);
+            for(int i = n; i < 2*n; i++){
                 if(hm.containsKey(a[i])){
                     invalid = true;
                     break;
