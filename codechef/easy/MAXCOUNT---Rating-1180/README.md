@@ -65,7 +65,7 @@ In first case 2 occurs twice whereas all other elements occur only once. In seco
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T09:14:20.861Z  
+**Submitted:** 2026-10-04T09:12:21.021Z  
 
 ```java
 class Solution {
@@ -78,13 +78,9 @@ class Solution {
         int maxKey = 0, maxVal = 0;
         for(Map.Entry<Integer,Integer> entry : hm.entrySet()){
             int value = entry.getValue();
-            int key = entry.getKey();
             if(value > maxVal){
                 maxVal = value;
-                maxKey = key;
-            }
-            else if (value == maxVal && key < maxKey) {
-                maxKey = key;
+                maxKey = entry.getKey();
             }
         }
         int[] res = new int[2];
