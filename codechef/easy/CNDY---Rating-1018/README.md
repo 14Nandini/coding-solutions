@@ -76,7 +76,7 @@ Since a valid assignment exists, the answer is "Yes".
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T14:30:50.823Z  
+**Submitted:** 2026-10-05T14:33:47.103Z  
 
 ```java
 import java.util.*;
@@ -93,15 +93,16 @@ class Codechef
         while(t-- > 0){
             int n = sc.nextInt();
             int[] a = new int[2*n];
-            for(int i = 0; i < n; i++){
-                int num = sc.nextInt();
-                hm.put(num, hm.getOrDefault(num, 0) + 1);
-            } 
+            for(int i = 0; i < 2*n; i++) a[i] = sc.nextInt();
+            
             HashMap<Integer, Integer> hm = new HashMap<>();
+
             boolean invalid = false;
             for(int i = 0; i < 2*n; i++){
-                if(hm.containsKey(a[i])){
+                hm.put(a[i], hm.getOrDefault(a[i], 0) + 1);
+                if(hm.get(a[i]) > 2){
                     invalid = true;
+                    break;
                 }
             }
             if(invalid) System.out.println("No");
