@@ -51,9 +51,9 @@ minStack.getMin(); // return -2
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-10-06T06:37:43.781Z  
+**Runtime:** 35 ms (beats 39.72%)  
+**Memory:** 100.1 MB (beats 43.64%)  
+**Submitted:** 2026-10-06T06:41:46.932Z  
 
 ```java
 class MinStack {
@@ -67,7 +67,7 @@ class MinStack {
     
     public void push(int value) {
         st.push(value);
-        if(min.isEmpty() || value < min.peek()) min.push(value);
+        if(min.isEmpty() || value <= min.peek()) min.push(value);
     }
     
     public void pop() {
@@ -80,8 +80,9 @@ class MinStack {
     }
     
     public int getMin() {
-        if(!min.isEmpty()) return min.peek();
-        return 0;
+        // if(!min.isEmpty()) return min.peek();
+        // return 0;
+        return min.peek();
     }
 }
 
