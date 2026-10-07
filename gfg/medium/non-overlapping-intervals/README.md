@@ -1,0 +1,35 @@
+# non-overlapping-intervals
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
+
+## Problem
+
+_Description not available._
+
+## Solution
+
+**Language:** Java  
+**Runtime:** N/A  
+**Memory:** N/A  
+**Submitted:** 2026-10-07T08:49:03.344Z  
+
+```java
+class Solution {
+    public int minRemoval(int intervals[][]) {
+        // code here
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[1], b[1]));
+        int c = 0, prevEnd = intervals[0][1];
+        for(int i = 1; i < intervals.length; i++){
+            int nextStart = intervals[i][0];
+            if(prevEnd > nextStart) c++;
+            else prevEnd = intervals[i][1];
+        }
+        return c;
+    }
+}
+
+```
+
+---
+
+[View on GeeksforGeeks](https://practice.geeksforgeeks.org/problems/non-overlapping-intervals/1)
