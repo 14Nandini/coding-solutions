@@ -48,14 +48,14 @@ Explanation: You don't need to remove any of the intervals since they're already
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-10-07T15:23:12.336Z  
+**Runtime:** 48 ms (beats 40.79%)  
+**Memory:** 115.8 MB (beats 56.96%)  
+**Submitted:** 2026-10-07T15:23:50.493Z  
 
 ```java
 class Solution {
     public int eraseOverlapIntervals(int[][] intervals) {
-        Arrays.sort(intervals, (a,b) -> Integer.compare(a[0], b[0]));
+        Arrays.sort(intervals, (a,b) -> Integer.compare(a[1], b[1]));
         int count = 0, prevEnd = intervals[0][1];
         for(int i = 1; i < intervals.length; i++){
             int nextFirst = intervals[i][0];
