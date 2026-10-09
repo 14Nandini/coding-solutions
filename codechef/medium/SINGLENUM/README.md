@@ -4,88 +4,70 @@
 
 ## Problem
 
-### Missing number in permutation
+### Single number in multiple numbers
 
-Given a  **permutation**  of $n$ distinct numbers chosen from the range $[0, n]$, find the  **one missing number**  that does not appear in the array.
+You are given a  **non-empty**  array of integers $nums$.
+In this array, every number occurs  **exactly twice**  except for one number that occurs only once.
+Your task is to find and return that unique number.
 
-## What is a Permutation?
+The solution must run in  **O(n)**  time complexity and use  **O(1)**  space complexity.
 
-A  **permutation**  is a rearrangement of elements in a set.
-
-- Example: If the set is ${0, 1, 2, 3}$, then $[3, 1, 0, 2]$ is a permutation because it contains all elements exactly once in some order.
-- In this problem, the array represents a permutation of $n$ numbers from $[0, n]$, except that one element is missing.
 ## Function Declaration
 ### Function Name
 
-$missingNumber$ – This function finds the missing number in a permutation.
+$singleNumber$ – Finds the one number in the array that appears exactly once while all other numbers appear twice.
 
 ### Parameters
-- $nums$ : An array of $n$ distinct integers taken from the range $[0, n]$.
+- $nums$ : A list/array of integers where every value appears exactly twice except one.
 ### Return Value
-- Returns a single integer — the missing number from the permutation.
-## Constraints
-- $1 \leq T \leq 100$
-- $n == nums.length$
-- $1 \leq n \leq 10^4$
-- $0 \leq nums[i] \leq n$
-- All elements in $nums$ are unique
-## Follow-up
-
-Can you solve this in  **O(n) time**  and  **O(1) extra space** ?
-
+- Returns an integer — the unique number that appears only once.
+## Constraints:
+- $1 \leq nums.length \leq 3 * 10^4$
+- $-3  *10^4 \leq nums[i] \leq 3*  10^4$
+- Exactly one element in the array appears once, and all others appear twice.
 ### Input Format
-- The first line contains a single integer $T$ — the number of test cases.
-- For each test case: The first line contains a single integer $N$ — the size of the array. The second line contains $N$ space-separated integers representing the permutation array.
+- $N$ → number of elements in the array
+- Next line → N integers representing $nums$
 ### Output Format
-- For each test case, print the missing number on a new line.
+- Print the single number that appears exactly once.
 ### Sample 1:
 Input
 Output
 
 ```
 3
-2
-2 0
-4
-4 2 1 0
-3
-1 2 3
-
-```
-
-```
 1
-3
-0
+10
+5
+9 1 9 2 1
+5
+7 3 5 3 7
 ```
 
-### Explanation:
-- In the first test case the numbers should form a permutation of [0,1,2], but 1 is missing.
-- In the second test case the numbers should form a permutation of [0, 1, 2, 3, 4], but 3 is missing.
+```
+10
+2
+5
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T06:57:45.958Z  
+**Submitted:** 2026-10-09T14:14:01.662Z  
 
 ```java
 class Solution {
-    public int missingNumber(int[] nums) {
+    public int singleNumber(int[] nums) {
         // write your code here
-        HashSet<Integer> hs = new HashSet<>();
-        for(int num : nums) hs.add(num);
-        int n = nums.length, res = 0;
-        while(n >= 0){
-            if(hs.contains(n)) n--;
-            else return n;
+        int result = 0;
+        for (int num : nums) {
+            result ^= num; 
         }
-        return res;
+        return result;
     }
 }
-
-
 ```
 
 ---
