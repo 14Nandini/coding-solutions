@@ -1,14 +1,10 @@
 class Solution {
-    public int missingNumber(int[] nums) {
+    public int singleNumber(int[] nums) {
         // write your code here
-        HashSet<Integer> hs = new HashSet<>();
-        for(int num : nums) hs.add(num);
-        int n = nums.length, res = 0;
-        while(n >= 0){
-            if(hs.contains(n)) n--;
-            else return n;
+        int result = 0;
+        for (int num : nums) {
+            result ^= num; 
         }
-        return res;
+        return result;
     }
 }
-
