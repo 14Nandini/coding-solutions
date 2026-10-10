@@ -35,7 +35,7 @@ prefixSum[2] = 30 + 10 + 10 = 50 and so on.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T08:47:15.890Z  
+**Submitted:** 2026-10-10T05:55:41.488Z  
 
 ```java
 class Solution {
