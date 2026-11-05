@@ -10,9 +10,9 @@ class Codechef
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while(t-- > 0){
-            int h = sc.nextInt();
-            int x = sc.nextInt();
-            int y = sc.nextInt();
+            long h = sc.nextLong();
+            long x = sc.nextLong();
+            long y = sc.nextLong();
             if(x > y) System.out.println(1);
             else System.out.println(0);
         }
