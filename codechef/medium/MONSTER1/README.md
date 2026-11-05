@@ -52,7 +52,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-05T05:55:18.990Z  
+**Submitted:** 2026-11-05T05:54:35.349Z  
 
 ```java
 import java.util.*;
@@ -67,9 +67,9 @@ class Codechef
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while(t-- > 0){
-            long h = sc.nextInt();
-            long x = sc.nextInt();
-            long y = sc.nextInt();
+            int h = sc.nextInt();
+            int x = sc.nextInt();
+            int y = sc.nextInt();
             if(x > y) System.out.println(1);
             else System.out.println(0);
         }
