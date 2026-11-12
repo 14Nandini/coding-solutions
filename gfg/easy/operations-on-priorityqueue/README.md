@@ -1,26 +1,55 @@
-# Operations on PriorityQueue
+# Min Priority Queue Operations
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
 ## Problem
 
-Given an integer array  **a[]**, your task is to add these elements to the  **PriorityQueue**. Also, given an array  **b[]**, the task is to check if the given element is present in the PriorityQueue or not.
-If the element is present, then 1 is printed by the driver code, after that the max element of priority queue is printed. Then the driver code deletes the max element.
- **Note:**  Here the driver code has implemented the PriorityQueue as a max-heap.
+Implement a class  **minPriorityQueue**  that supports the following operations:
 
- **Example:** 
+- void push(int x): Insert an element x into the priority queue.
+- int pop(): Remove the smallest element from the priority queue and return. If the queue is empty, return -1. 
+- int peek(): Return the smallest element in the priority queue. If the queue is empty, return -1. 
+- bool isEmpty(): Return true if the priority queue is empty, otherwise false.
+- int size(): Return the number of elements currently in the priority queue.
+
+There will be a sequence of q queries,  **queries[][]**. The queries are represented in numeric form:
+
+- 1 x - Call push(x).
+- 2 - Call pop().
+- 3 - Call peek().
+- 4 - Call isEmpty().
+- 5 - Call size().
+
+The driver code will process the queries, call the corresponding functions, and print the outputs of pop(), peek(), isEmpty(), and size() operations. You only need to implement the above five functions.
+
+ **Examples:** 
 
 ```
-Input: a[] = [1, 2, 3, 4, 5, 2, 3, 1], b[] = [1, 3, 2, 9, 10]
-Output: 1 5 1 4 1 3 -1 -1
-Explanation: After inserting elements present in a[], when we find b[0] = 1, which is present, so 1 gets printed, and then the top element of the PriorityQueue which is 5 gets printed, and then it gets deleted. Similarly, when element is not present, just -1 is printed.
-
+Input: queries[][] = [[1, 10], [1, 4], [1, 7], [3], [2], [3], [4], [5]]
+Output: [4, 4, 7, false, 2]
+Explanation: Operations on the priority queue will process as follows:
+push(10), insert 10 into the priority queue.
+push(4), insert 4 into the priority queue.
+push(7), insert 7 into the priority queue.
+peek(), return 4, the smallest element in the priority queue.
+pop(), remove 4 from the priority queue and return.
+peek(), return 7, the smallest element remaining.
+isEmpty(), priority queue is non-empty; i.e. return false.
+size(), priority queue currently contains two elements, return 2.
 ```
 
 ```
-Input: a[] = [1, 2, 3, 4], b[] = [1, 10]
-Output: 1 4 -1
-Explanation: After inserting elements present in a[], when we find b[0] = 1, which is present, so 1 gets printed, and then the top element of the PriorityQueue which is 4 gets printed, and then it gets deleted. Similarly, when element is not present, just -1 is printed.
+Input: queries[][] = [[3], [1, 20], [4], [5], [1, 8], [1, 12], [2], [3]]
+Output: [-1, false, 1, 8, 12]
+Explanation: Operations on the priority queue will process as follows:
+peek(), return -1, the priority queue is empty. 
+push(20), insert 20 into the priority queue.
+isEmpty(), priority queue is non-empty; i.e. return false.
+size(), priority queue currently contains one element, return 1.
+push(8), insert 8 into the priority queue.
+push(12), insert 12 into the priority queue.
+pop(), remove 8, the smallest element from the priority queue and return it.
+peek(), return 12, the smallest element remaining.
 ```
 
 ## Solution
@@ -28,30 +57,44 @@ Explanation: After inserting elements present in a[], when we find b[0] = 1, whi
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-06T14:19:43.629Z  
+**Submitted:** 2026-11-12T10:16:08.829Z  
 
 ```java
-class Geeks {
-
-    // Function to insert k into the priority queue q
-    static void insert(PriorityQueue<Integer> q, int k) {
-        // code here
-        q.add(k);
-        
-    }
-
-    // If k is in q return true else return false
-    static boolean find(PriorityQueue<Integer> q, int k) {
-        // code here
-        return q.contains(k);
-    }
-
-    // Function to delete the max element from priority queue
-    static int delete(PriorityQueue<Integer> q) {
-        // code here
-        return q.poll();
-    }
+class minPriorityQueue {
+	// Initialize your priority queue
+	private PriorityQueue<Integer> pq;
+	
+	public minPriorityQueue() {
+		pq = new PriorityQueue<>();
+	}
+	
+	public void push(int x) {
+		pq.offer(x);
+	}
+	
+	public int pop() {
+		if (pq.isEmpty()) {
+			return - 1;
+		}
+		return pq.poll();
+	}
+	
+	public int peek() {
+		if (pq.isEmpty()) {
+			return - 1;
+		}
+		return pq.peek();
+	}
+	
+	public boolean isEmpty() {
+		return pq.isEmpty();
+	}
+	
+	public int size() {
+		return pq.size();
+	}
 }
+
 ```
 
 ---
