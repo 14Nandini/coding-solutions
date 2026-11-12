@@ -1,21 +1,34 @@
-class Geeks {
-
-    // Function to insert k into the priority queue q
-    static void insert(PriorityQueue<Integer> q, int k) {
-        // code here
-        q.add(k);
-        
-    }
-
-    // If k is in q return true else return false
-    static boolean find(PriorityQueue<Integer> q, int k) {
-        // code here
-        return q.contains(k);
-    }
-
-    // Function to delete the max element from priority queue
-    static int delete(PriorityQueue<Integer> q) {
-        // code here
-        return q.poll();
-    }
+class minPriorityQueue {
+	// Initialize your priority queue
+	private PriorityQueue<Integer> pq;
+	
+	public minPriorityQueue() {
+		pq = new PriorityQueue<>();
+	}
+	
+	public void push(int x) {
+		pq.offer(x);
+	}
+	
+	public int pop() {
+		if (pq.isEmpty()) {
+			return - 1;
+		}
+		return pq.poll();
+	}
+	
+	public int peek() {
+		if (pq.isEmpty()) {
+			return - 1;
+		}
+		return pq.peek();
+	}
+	
+	public boolean isEmpty() {
+		return pq.isEmpty();
+	}
+	
+	public int size() {
+		return pq.size();
+	}
 }
