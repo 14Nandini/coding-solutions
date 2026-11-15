@@ -10,6 +10,8 @@ You must implement a solution with a linear runtime complexity and use only co
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -37,14 +39,14 @@ Output: 99
 ## Solution
 
 **Language:** Java  
-**Runtime:** 7 ms (beats 20.04%)  
-**Memory:** 45.7 MB (beats 33.32%)  
-**Submitted:** 2026-10-15T16:18:55.166Z  
+**Runtime:** 14 ms (beats 7.33%)  
+**Memory:** 47.2 MB (beats 6.27%)  
+**Submitted:** 2026-11-15T14:08:11.279Z  
 
 ```java
 class Solution {
     public int singleNumber(int[] nums) {
-         HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
 
         for(int i : nums){
            map.put(i, map.getOrDefault(i, 0) + 1);
