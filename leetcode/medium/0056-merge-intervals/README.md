@@ -8,6 +8,8 @@ Given an array of `intervals` where `intervals[i] = [starti, endi]`, merge all
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -46,9 +48,9 @@ Explanation: Intervals [1,4] and [4,7] are considered overlapping.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 12 ms (beats 8.87%)  
-**Memory:** 49.2 MB (beats 26.79%)  
-**Submitted:** 2026-10-07T07:18:22.475Z  
+**Runtime:** 8 ms (beats 93.05%)  
+**Memory:** 48.7 MB (beats 61.85%)  
+**Submitted:** 2026-11-16T04:57:19.198Z  
 
 ```java
 class Solution {
