@@ -29,17 +29,12 @@ Output: 0
 Explanation: 1 appears at index 0.
 ```
 
-**Constraints:
-**1 ≤ arr.size() ≤ 105
-1 ≤ arr[i] ≤ 106
-1 ≤ k ≤ 106
-
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-17T14:57:36.427Z  
+**Submitted:** 2026-11-17T09:49:11.824Z  
 
 ```java
 class Solution {
