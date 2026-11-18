@@ -18,6 +18,8 @@ Return  *the minimum number of moves required to make* `s` *valid*.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -44,9 +46,9 @@ Output: 3
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-10-06T14:43:53.736Z  
+**Runtime:** 1 ms (beats 47.68%)  
+**Memory:** 42.2 MB (beats 98.97%)  
+**Submitted:** 2026-11-18T13:33:23.694Z  
 
 ```java
 class Solution {
