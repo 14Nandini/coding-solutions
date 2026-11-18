@@ -4,7 +4,7 @@
 
 ## Problem
 
-Given an unsorted array  **arr[]** of size  **n**, containing elements from the range  **1** to **n**, it is known that one number in this range is  **missing**, and another number  **occurs twice**  in the array, find both the  **duplicate** number and the  **missing** number.
+Given an unsorted array  **arr[]** of size  **n**, containing elements from the range  **1** to **n**, it is known that one number in this range is missing, and another number occurs twice in the array, find the both numbers.
 
 **Examples:
 **
@@ -27,16 +27,12 @@ Output: [1, 5]
 Explanation: Repeating number is 1 and the missing number is 5.
 ```
 
- **Constraints:** 
-2 ≤ n ≤ 106
-1 ≤ arr[i] ≤ n
-
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-08T14:24:18.491Z  
+**Submitted:** 2026-11-18T13:32:33.858Z  
 
 ```java
 class Solution {
