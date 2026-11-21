@@ -8,6 +8,8 @@ Given two binary strings `a` and `b`, return  *their sum as a binary string*.
 
  
 
+Original
+Java
  **Example 1:** 
 
 ```
@@ -35,9 +37,9 @@ Output: "10101"
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 99.97%)  
-**Memory:** 43.6 MB (beats 53.36%)  
-**Submitted:** 2026-10-13T16:13:22.196Z  
+**Runtime:** 2 ms (beats 70.03%)  
+**Memory:** 42.8 MB (beats 95.06%)  
+**Submitted:** 2026-11-21T16:03:00.759Z  
 
 ```java
 class Solution {
