@@ -53,12 +53,13 @@ There are no 'a's, hence, every 'a' appears before every 'b' and we return true.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41.8 MB  
-**Submitted:** 2026-11-22T07:05:35.039Z  
+**Memory:** 42.1 MB  
+**Submitted:** 2026-11-22T07:06:00.332Z  
 
 ```java
 class Solution {
     public boolean checkString(String s) {
+        if(s.length() == 1) return true;
         int aidx = s.lastIndexOf('a');
         int bidx = s.indexOf('b');
         if( aidx > bidx) return false;
