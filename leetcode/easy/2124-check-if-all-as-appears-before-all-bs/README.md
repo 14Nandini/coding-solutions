@@ -52,18 +52,19 @@ There are no 'a's, hence, every 'a' appears before every 'b' and we return true.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-11-22T07:06:00.332Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.5 MB (beats 57.23%)  
+**Submitted:** 2026-11-22T07:12:50.875Z  
 
 ```java
 class Solution {
     public boolean checkString(String s) {
-        if(s.length() == 1) return true;
-        int aidx = s.lastIndexOf('a');
-        int bidx = s.indexOf('b');
-        if( aidx > bidx) return false;
-        return true;
+        return !s.contains("ba");
+        // if(s.length() == 1) return true;
+        // int aidx = s.lastIndexOf('a');
+        // int bidx = s.indexOf('b');
+        // if( aidx == 0 || bidx == 0 || aidx < bidx) return true;
+        // return false;
     }
 }
 ```
