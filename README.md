@@ -2,7 +2,7 @@
 
 # 🧠 Coding Solutions
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-398-blue?style=for-the-badge)
+![Total Solved](https://img.shields.io/badge/Total_Solved-400-blue?style=for-the-badge)
 ![Streak](https://img.shields.io/badge/Streak-20_days-orange?style=for-the-badge)
 ![Last Synced](https://img.shields.io/badge/Last_Synced-11--23--2026-green?style=for-the-badge)
 
@@ -16,16 +16,16 @@
 
 | Difficulty | Solved |
 |:---:|:---:|
-| 🟢 Easy | **207** |
+| 🟢 Easy | **208** |
 | 🟡 Medium | **152** |
 | 🔴 Hard | **4** |
-| **Total** | **398** |
+| **Total** | **400** |
 
 ## 🛠️ Languages
 
 | Language | Solutions |
 |:---:|:---:|
-| Java | **376** |
+| Java | **378** |
 | SQL | **20** |
 | C++ | **2** |
 
